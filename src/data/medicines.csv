@@ -1,0 +1,11 @@
+name,brand,dosage,price_apollo,price_medplus,price_netmeds,in_stock
+Paracetamol,Crocin,500mg,45.99,43.75,48.00,true
+Ibuprofen,Brufen,400mg,65.50,62.00,68.75,true
+Aspirin,Ecosprin,100mg,89.99,87.50,95.00,true
+Vitamin D3,Nature's Bounty,1000IU,299.99,290.00,310.00,true
+Vitamin C,Nutraceutical,500mg,199.99,190.00,210.00,true
+Metformin,Glucophage,500mg,45.00,42.50,48.00,true
+Atorvastatin,Lipitor,10mg,199.99,190.00,210.00,true
+Lisinopril,Zestril,10mg,149.99,140.00,160.00,true
+Amoxicillin,Augmentin,500mg,125.00,120.00,130.00,true
+Azithromycin,Zithromax,250mg,150.00,145.00,160.00,true

@@ -1,0 +1,10 @@
+store,medicine_name,price,in_stock
+Apollo Pharmacy,Paracetamol 500mg,45.99,true
+Apollo Pharmacy,Vitamin D3,299.99,true
+Apollo Pharmacy,Aspirin 100mg,89.99,true
+Medplus,Paracetamol 500mg,43.75,true
+Medplus,Vitamin D3,290.00,true
+Medplus,Aspirin 100mg,87.50,true
+NetMeds,Paracetamol 500mg,48.00,true
+NetMeds,Vitamin D3,310.00,true
+NetMeds,Aspirin 100mg,95.00,true

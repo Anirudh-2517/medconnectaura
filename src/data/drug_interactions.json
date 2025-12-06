@@ -1,0 +1,40 @@
+{
+  "interactions": [
+    {
+      "drug1": "Paracetamol",
+      "drug2": "Alcohol",
+      "severity": "high",
+      "description": "Increased risk of liver damage"
+    },
+    {
+      "drug1": "Aspirin",
+      "drug2": "Warfarin",
+      "severity": "high",
+      "description": "Increased bleeding risk"
+    },
+    {
+      "drug1": "Ibuprofen",
+      "drug2": "Aspirin",
+      "severity": "medium",
+      "description": "Increased GI bleeding risk"
+    },
+    {
+      "drug1": "Metformin",
+      "drug2": "Alcohol",
+      "severity": "medium",
+      "description": "Increased risk of lactic acidosis"
+    },
+    {
+      "drug1": "Atorvastatin",
+      "drug2": "Gemfibrozil",
+      "severity": "high",
+      "description": "Increased muscle breakdown risk"
+    },
+    {
+      "drug1": "Lisinopril",
+      "drug2": "Potassium supplements",
+      "severity": "high",
+      "description": "Risk of hyperkalemia"
+    }
+  ]
+}

@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MedConnect AI - Agentic Medical Dashboard
 
-## Getting Started
+An intelligent medical assistant web application that helps users manage prescriptions, track medications, receive smart reminders, and compare pharmacy prices.
 
-First, run the development server:
+## 🎯 Features
 
+### 1. **Prescription Management**
+- Upload prescription images (JPG, PNG) or PDFs
+- Automatic OCR extraction using Tesseract.js
+- AI-powered medicine detection and parsing
+- Prescription history and file management
+
+### 2. **Medication Management**
+- Track active medications with dosage and frequency
+- Automatic reminder scheduling
+- Medicine expiry tracking
+- Active medications timeline
+
+### 3. **Smart Reminders & Alerts**
+- Time-based medication reminders
+- Drug interaction warnings
+- Health tip alerts
+- Browser push notifications
+
+### 4. **Pharmacy Price Comparison**
+- Real-time price comparison across multiple stores
+- Locate nearby pharmacies (Apollo, Medplus, NetMeds)
+- Stock availability checking
+- Best price recommendations
+- Store navigation
+
+### 5. **AI Agents**
+- **OCR Agent**: Extracts text from prescription images using Tesseract.js
+- **Extraction Agent**: Parses medicines using OpenAI GPT-4
+- **Schedule Agent**: Generates reminder schedules automatically
+- **Price Agent**: Compares pharmacy prices
+- **Interaction Agent**: Detects dangerous drug interactions
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+- Supabase account
+- OpenAI API key
+
+### Installation
+
+1. **Setup:**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd medconnect-ai
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Configure `.env.local`:**
+```
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_key
+OPENAI_API_KEY=your_openai_key
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_maps_key
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Start development:**
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Visit `http://localhost:3000` - Login or register to get started!
 
-## Learn More
+## 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+- **`src/app/(auth)/`** - Login & Register pages
+- **`src/app/dashboard/`** - Main dashboard, medicines, price comparison
+- **`src/app/api/`** - API routes for all features
+- **`src/agents/`** - AI agents (OCR, extraction, scheduling, prices, interactions)
+- **`src/lib/`** - Database, auth, storage, AI, OCR utilities
+- **`src/components/`** - Reusable UI components
+- **`src/data/`** - Medicine data, drug interactions, store info
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔑 Technologies
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Next.js 16** - React framework
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Styling
+- **Supabase** - Database & Auth
+- **OpenAI GPT-4** - AI parsing
+- **Tesseract.js** - OCR
+- **React Hook Form** - Form management
+- **Zod** - Schema validation
 
-## Deploy on Vercel
+## 📱 Key Pages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `/auth/login` - User login
+- `/auth/register` - User registration
+- `/dashboard` - Main dashboard with overview
+- `/dashboard/upload` - Upload prescriptions
+- `/dashboard/medicines` - Manage active medications
+- `/dashboard/price-compare` - Compare pharmacy prices
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔄 User Workflow
+
+1. Sign up / Login
+2. Upload prescription (image or PDF)
+3. OCR extracts text automatically
+4. AI parses medicines from text
+5. Drug interaction check
+6. Schedule reminders
+7. Find best pharmacy prices
+8. Get daily medication reminders
+
+## 🧠 How Agents Work
+
+**OCR Agent** → Tesseract.js processes image → Text extraction
+**Extraction Agent** → GPT-4 parses text → Medicine data JSON
+**Schedule Agent** → Generates reminder times from frequency
+**Price Agent** → Searches medicine prices across stores
+**Interaction Agent** → Checks drug interactions from database
+
+## 🗄️ Database
+
+Tables: users, prescriptions, medications, reminders, stores, medicine_prices
+
+See `src/scripts/database-schema.sql` for full schema.
+
+## 🚀 Deploy to Vercel
+
+```bash
+# Push to GitHub
+# Connect repo to Vercel
+# Add environment variables
+# Deploy!
+```
+
+## 📝 API Endpoints
+
+- `POST /api/upload/prescription` - Upload & process prescription
+- `POST /api/ocr/process` - Extract medicines via OCR
+- `GET /api/medicines/alerts` - Get today's reminders
+- `POST /api/stores/compare` - Compare medicine prices
+- `POST /api/ai/extract` - Extract medicine data
+
+## 🙏 Built With
+
+- OpenAI GPT-4
+- Supabase PostgreSQL
+- Tesseract.js
+- Next.js & React
+- Tailwind CSS
+
+---
+
+**MedConnect AI** - Smart Healthcare Management 💊✨

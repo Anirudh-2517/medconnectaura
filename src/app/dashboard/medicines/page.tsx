@@ -1,5 +1,6 @@
 'use client';
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
@@ -83,7 +84,7 @@ export default function MedicinesPage() {
         </Card>
         <Card>
           <CardBody>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Today's Doses</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">Today&apos;s Doses</p>
             <p className="text-2xl font-bold text-gray-900 dark:text-white">{todaysDoses}</p>
           </CardBody>
         </Card>

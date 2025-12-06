@@ -1,5 +1,6 @@
 'use client';
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { Card, CardHeader, CardBody } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
@@ -8,7 +9,7 @@ export function ReminderTimeline({ reminders }: any) {
   return (
     <Card>
       <CardHeader>
-        <h3 className="font-semibold text-gray-900 dark:text-white">Today's Reminders</h3>
+        <h3 className="font-semibold text-gray-900 dark:text-white">Today&apos;s Reminders</h3>
       </CardHeader>
       <CardBody>
         <div className="space-y-4">

@@ -10,8 +10,11 @@ export function Navbar() {
   const router = useRouter();
 
   const handleLogout = () => {
-    // TODO: Implement logout
-    router.push('/auth/login');
+    // Clear stored token and navigate to login
+    try {
+      localStorage.removeItem('token');
+    } catch {}
+    router.push('/login');
   };
 
   return (

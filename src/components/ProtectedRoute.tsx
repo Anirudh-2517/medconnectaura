@@ -21,7 +21,8 @@ export function ProtectedRoute({ children }: ProtectedRouteProps) {
         
         if (!token) {
           setIsAuthenticated(false);
-          router.push('/auth/login');
+          // Use the app's login path
+          router.push('/login');
           return;
         }
 
@@ -39,7 +40,7 @@ export function ProtectedRoute({ children }: ProtectedRouteProps) {
             // Token is invalid
             localStorage.removeItem('token');
             setIsAuthenticated(false);
-            router.push('/auth/login');
+            router.push('/login');
           }
         } catch (error) {
           console.error('Token verification failed:', error);

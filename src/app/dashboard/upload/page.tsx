@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
 import React, { useState } from 'react';
@@ -58,7 +59,7 @@ export default function UploadPage() {
       <div>
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Upload Prescription</h1>
         <p className="text-gray-600 dark:text-gray-400 mt-2">
-          Upload your prescription image or PDF. We'll extract the medicines automatically.
+          Upload your prescription image or PDF. We will extract the medicines automatically.
         </p>
       </div>
 

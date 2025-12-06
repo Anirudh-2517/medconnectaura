@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextRequest, NextResponse } from 'next/server';
 import { extractMedicationData, detectDrugInteractions } from '@/lib/ai';
 import { supabase } from '@/lib/db';

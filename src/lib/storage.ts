@@ -15,11 +15,12 @@ export async function uploadPrescriptionFile(file: File, userId: string): Promis
 
   if (error) throw error;
 
-  const { data: publicUrl } = supabase.storage
-    .from(BUCKET_NAME)
-    .getPublicUrl(fileName);
+  const publicRes = supabase.storage.from(BUCKET_NAME).getPublicUrl(fileName);
 
-  return publicUrl.publicUrl;
+  // `getPublicUrl` returns an object with `data.publicUrl` when successful
+  const publicUrl = publicRes?.data?.publicUrl || '';
+
+  return publicUrl;
 }
 
 export async function deletePrescriptionFile(filePath: string): Promise<void> {

@@ -1,10 +1,17 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import axios from 'axios';
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api';
-const getAuthHeader = () => ({
-  Authorization: `Bearer ${localStorage.getItem('token')}`,
-});
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || '/api';
+
+const getAuthHeader = () => {
+  try {
+    if (typeof window === 'undefined') return {};
+    const token = localStorage.getItem('token');
+    return token ? { Authorization: `Bearer ${token}` } : {};
+  } catch {
+    return {};
+  }
+};
 
 // Medications Hooks
 export function useMedications() {

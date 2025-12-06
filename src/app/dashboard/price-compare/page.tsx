@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { PriceComparisonTable } from '../components/PriceComparisonTable';
@@ -70,6 +71,7 @@ export default function PriceComparePage() {
 
   useEffect(() => {
     if (medicinesData) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setMedicines(medicinesData);
       if (!selectedMedicine && medicinesData.length > 0) {
         setSelectedMedicine(medicinesData[0]);

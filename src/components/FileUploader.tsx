@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Upload, File, X } from 'lucide-react';
+import { Upload, File as FileIcon, X } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { cn } from '@/lib/helpers';
 
@@ -90,7 +90,7 @@ export function FileUploader({ onFileSelected, accept = 'image/*,.pdf', disabled
         <div className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <File className="h-8 w-8 text-blue-600" />
+              <FileIcon className="h-8 w-8 text-blue-600" />
               <div>
                 <p className="text-sm font-medium text-gray-900 dark:text-white">{selectedFile.name}</p>
                 <p className="text-xs text-gray-500 dark:text-gray-400">

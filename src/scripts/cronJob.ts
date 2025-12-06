@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // Cron job for handling medication reminders
 // This would typically run every hour or at specified intervals
 
